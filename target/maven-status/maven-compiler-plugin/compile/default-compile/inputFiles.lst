@@ -1,0 +1,7 @@
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/model/service/PersonDto.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/SmarthomeApplication.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/model/entity/Person.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/service/PersonService.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/dao/PersonRepository.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/configuration/SwaggerConfiguration.java
+/Users/niklas.wiken/Repos/smarthome/src/main/java/se/home/controller/PersonController.java

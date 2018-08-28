@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: "SmartHome"
+  main:
+    banner-mode: "off"
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/public
+    username: sa
+    password: test
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    show-sql: true
+
+endpoints:
+  beans:
+    sensitive: false
+
+security:
+  basic:
+    enabled: false
+
+management:
+  security:
+    enabled: false

@@ -1,0 +1,83 @@
+databaseChangeLog:
+  - preConditions:
+    - runningAs:
+        username: sa
+
+  - changeSet:
+      id: 1
+      author: niklaswiken
+      description: "Creating table person"
+      changes:
+        - createTable:
+            catalogName: niklas
+            tableName: person
+            schemaName: public
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(50)
+              - column:
+                  name: lastname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: char(2)
+
+
+  - changeSet:
+      id: 2
+      author: liquibase-docs
+      changes:
+      - createSequence:
+          catalogName: niklas
+          cycle: false
+          incrementBy: 1
+          ordered: true
+          schemaName: public
+          sequenceName: seq_person_id
+          startValue: 1
+
+  - changeSet:
+      id: 3
+      author: niklaswiken
+      description: "Adding person to table person"
+      changes:
+        - insert:
+            catalogName: niklas
+            tableName: person
+            schemaName: public
+            columns:
+              - column:
+                  name: firstname
+                  value: Anders
+              - column:
+                  name: lastname
+                  value: Andersson
+              - column:
+                  name: age
+                  value: 28
+            dbms: h2
+        - insert:
+            catalogName: niklas
+            tableName: person
+            schemaName: public
+            columns:
+              - column:
+                  name: firstname
+                  value: Anna
+              - column:
+                  name: lastname
+                  value: Annason
+              - column:
+                  name: age
+                  value: 22
+

@@ -1,0 +1,29 @@
+spring:
+    application:
+      name: "SmartHome"
+    main:
+        banner-mode: "off"
+    h2:
+        console:
+            enabled: true
+            path: /h2
+    datasource:
+           driverClassName: org.h2.Driver
+           url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+           username: sa
+           password: test
+    jpa:
+        database-platform: org.hibernate.dialect.H2Dialect
+        show-sql: true
+
+endpoints:
+    beans:
+        sensitive: false
+
+security:
+    basic:
+        enabled: false
+
+management:
+    security:
+        enabled: false
